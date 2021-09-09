@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,72 +12,57 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SFSU_Irene_Jiang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-ad-PNe">
-                                <rect key="frame" x="143" y="403" width="128" height="90"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jkK-ZT-4j9">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="90"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eac-bE-EIX">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <state key="normal" title="Order Pizza">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonOrderPizza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBM-2H-ov2"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buB-CL-Xde">
-                                                <rect key="frame" x="0.0" y="50" width="128" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <state key="normal" title="Order Burger">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonOrderBurger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qX-PH-hQ5"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mochi" translatesAutoresizingMaskIntoConstraints="NO" id="Las-9D-Wc2">
+                                <rect key="frame" x="16" y="20" width="343" height="458"/>
                                 <constraints>
-                                    <constraint firstItem="jkK-ZT-4j9" firstAttribute="centerX" secondItem="I8Q-ad-PNe" secondAttribute="centerX" id="7ed-18-9kX"/>
-                                    <constraint firstItem="jkK-ZT-4j9" firstAttribute="centerY" secondItem="I8Q-ad-PNe" secondAttribute="centerY" id="iWw-Yv-UEI"/>
+                                    <constraint firstAttribute="height" constant="458" id="lke-3M-99Y"/>
                                 </constraints>
-                            </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mEB-sO-fXa">
-                                <rect key="frame" x="87" y="187" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet Mochi the cat!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r34-id-jTD">
+                                <rect key="frame" x="16" y="486" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="tIb-0U-mAR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pQz-Cp-Y62">
+                                <rect key="frame" x="16" y="525" width="343" height="122"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="kqT-YO-d1Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                            </tableView>
+                                <string key="text">This is Mochi. She's a British Short-haired cat. She is around nine months old now and she's super cute. She loves to be outdoors and enjoys playing a lot. She eats raw meat but is very clean about it. Mochi can be clingy sometimes and meows a lot but thats because she loves people :).</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="I8Q-ad-PNe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ok-ij-x8l"/>
-                            <constraint firstItem="I8Q-ad-PNe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eRV-U9-BXr"/>
+                            <constraint firstItem="pQz-Cp-Y62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8W7-Vg-VyM"/>
+                            <constraint firstItem="Las-9D-Wc2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Bbf-DB-Ime"/>
+                            <constraint firstItem="r34-id-jTD" firstAttribute="top" secondItem="Las-9D-Wc2" secondAttribute="bottom" constant="8" id="EDe-dF-9k5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r34-id-jTD" secondAttribute="trailing" constant="16" id="FEB-q8-O2E"/>
+                            <constraint firstItem="Las-9D-Wc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LZT-cV-tyI"/>
+                            <constraint firstItem="pQz-Cp-Y62" firstAttribute="top" secondItem="r34-id-jTD" secondAttribute="bottom" constant="8" id="VP8-AC-TrK"/>
+                            <constraint firstItem="r34-id-jTD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnb-WY-4LG"/>
+                            <constraint firstItem="Las-9D-Wc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksn-Kt-VfG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pQz-Cp-Y62" secondAttribute="trailing" constant="16" id="meq-c2-2UX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pQz-Cp-Y62" secondAttribute="bottom" constant="20" id="s9W-Pf-9bf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Las-9D-Wc2" secondAttribute="trailing" constant="16" id="tCJ-f0-EMO"/>
+                            <constraint firstItem="r34-id-jTD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uy4-La-PNh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="messageDisplayOrderPrice" destination="kqT-YO-d1Z" id="vgz-VY-CEa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="136.80000000000001" y="129.08545727136433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mochi" width="384" height="512"/>
+    </resources>
 </document>
