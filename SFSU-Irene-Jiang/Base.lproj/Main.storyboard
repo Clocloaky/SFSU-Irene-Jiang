@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,15 +12,79 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SFSU_Irene_Jiang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-Rd-cmM">
+                                <rect key="frame" x="0.0" y="0.0" width="453" height="805"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ga-Af-zoT">
+                                        <rect key="frame" x="160" y="566" width="168" height="30"/>
+                                        <state key="normal" title="Order Burger"/>
+                                        <connections>
+                                            <action selector="orderBurgerButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t8u-CH-VE9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-nE-qRN">
+                                        <rect key="frame" x="165" y="515" width="119" height="30"/>
+                                        <state key="normal" title="Order Pizza"/>
+                                        <connections>
+                                            <action selector="orderPizzaButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gX-7Y-AHu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSf-Cd-oqx">
+                                        <rect key="frame" x="186" y="472" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-SQ-JVk">
+                                        <rect key="frame" x="107" y="472" width="239" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-Zh-d9g">
+                                        <rect key="frame" x="8" y="26" width="437" height="385"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="352" id="gKH-ZK-j3X"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Hfd-nE-qRN" firstAttribute="top" secondItem="rb7-SQ-JVk" secondAttribute="bottom" constant="43" id="2Wx-Fd-3qy"/>
+                                    <constraint firstItem="rb7-SQ-JVk" firstAttribute="leading" secondItem="cHf-Rd-cmM" secondAttribute="leading" constant="107" id="3xv-Of-CD6"/>
+                                    <constraint firstItem="Dka-Zh-d9g" firstAttribute="leading" secondItem="cHf-Rd-cmM" secondAttribute="leadingMargin" id="9KU-cV-Raa"/>
+                                    <constraint firstItem="3ga-Af-zoT" firstAttribute="top" secondItem="Hfd-nE-qRN" secondAttribute="bottom" constant="21" id="JYI-ar-VIQ"/>
+                                    <constraint firstItem="Dka-Zh-d9g" firstAttribute="centerX" secondItem="rb7-SQ-JVk" secondAttribute="centerX" id="NR0-ll-FIr"/>
+                                    <constraint firstItem="rb7-SQ-JVk" firstAttribute="top" secondItem="Dka-Zh-d9g" secondAttribute="bottom" constant="96" id="RRR-rC-5Io"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ga-Af-zoT" secondAttribute="trailing" constant="164" id="WFP-2j-jbd"/>
+                                    <constraint firstItem="3ga-Af-zoT" firstAttribute="leading" secondItem="cHf-Rd-cmM" secondAttribute="leading" constant="160" id="Wg6-mx-0NM"/>
+                                    <constraint firstAttribute="trailing" secondItem="rb7-SQ-JVk" secondAttribute="trailing" constant="107" id="eMd-CI-CSP"/>
+                                    <constraint firstItem="Dka-Zh-d9g" firstAttribute="top" secondItem="cHf-Rd-cmM" secondAttribute="top" constant="24" id="gr7-gE-FNI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hfd-nE-qRN" secondAttribute="trailing" constant="169" id="iOX-cm-6xW"/>
+                                    <constraint firstItem="Hfd-nE-qRN" firstAttribute="leading" secondItem="cHf-Rd-cmM" secondAttribute="leading" constant="165" id="ntc-Yd-Jn0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cHf-Rd-cmM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KCg-65-ZGR"/>
+                            <constraint firstItem="cHf-Rd-cmM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SBJ-IR-0Ol"/>
+                            <constraint firstItem="cHf-Rd-cmM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o1k-ss-6Wu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="foodImageView" destination="Dka-Zh-d9g" id="ZoD-XK-qYZ"/>
+                        <outlet property="foodOrderCostDisplay" destination="rb7-SQ-JVk" id="vRE-j5-nh9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>
         </scene>
     </scenes>
 </document>
