@@ -16,17 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-Rd-cmM">
-                                <rect key="frame" x="0.0" y="0.0" width="453" height="805"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ga-Af-zoT">
-                                        <rect key="frame" x="160" y="566" width="168" height="30"/>
+                                        <rect key="frame" x="160" y="566" width="90" height="30"/>
                                         <state key="normal" title="Order Burger"/>
                                         <connections>
                                             <action selector="orderBurgerButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t8u-CH-VE9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-nE-qRN">
-                                        <rect key="frame" x="165" y="515" width="119" height="30"/>
+                                        <rect key="frame" x="165" y="515" width="80" height="30"/>
                                         <state key="normal" title="Order Pizza"/>
                                         <connections>
                                             <action selector="orderPizzaButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gX-7Y-AHu"/>
@@ -40,13 +40,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-SQ-JVk">
-                                        <rect key="frame" x="107" y="472" width="239" height="0.0"/>
+                                        <rect key="frame" x="107" y="472" width="200" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-Zh-d9g">
-                                        <rect key="frame" x="8" y="26" width="437" height="385"/>
+                                        <rect key="frame" x="8" y="24" width="398" height="352"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="352" id="gKH-ZK-j3X"/>
                                         </constraints>
