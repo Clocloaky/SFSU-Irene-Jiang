@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
+    let image1 = "sfsu01"
+    let image2 = "sfsu02"
+    let image3 = "sfsu03"
+    let image4 = "sfsu04"
+    let image5 = "sfsu05"
     @IBOutlet weak var buildingImageView: UIImageView!
     @IBOutlet weak var buildNameDisplay: UILabel!
     var imageNumber = 0
@@ -21,11 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func nextBuildingClicked(_ sender: UIButton) {
         
-        let image1 = "sfsu01"
-        let image2 = "sfsu02"
-        let image3 = "sfsu03"
-        let image4 = "sfsu04"
-        let image5 = "sfsu05"
+
         imageNumber = imageNumber+1
         
         if imageNumber == 1 {
