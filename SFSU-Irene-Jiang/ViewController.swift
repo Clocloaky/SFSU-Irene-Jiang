@@ -10,41 +10,52 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var quoteNumber = 0
-    @IBOutlet weak var quoteDisplayView: UITextView!
-    @IBOutlet weak var quoteAuthorView: UILabel!
+    @IBOutlet weak var adjectiveField: UITextField!
+    @IBOutlet weak var verbField: UITextField!
+    @IBOutlet weak var sayingField: UITextField!
+    @IBOutlet weak var nounField: UITextField!
+    @IBOutlet weak var foodsField: UITextField!
+    @IBOutlet weak var colorField: UITextField!
+    @IBOutlet weak var somethingField: UITextField!
+    @IBOutlet weak var animalField: UITextField!
+    @IBOutlet weak var personField: UITextField!
+    
+    @IBOutlet weak var madLibDisplayView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        personField.returnKeyType = .done
     }
     
-
-    @IBAction func nextQuoteClick(_ sender: UIButton) {
-        quoteNumber += 1
-        
-        switch quoteNumber {
-        case 1:
-            quoteDisplayView.text="Don't watch the clock; do what it does. Keep going."
-            quoteAuthorView.text="Sam Levenson"
-        case 2:
-            quoteDisplayView.text="Quality is not an act, it is a habit."
-            quoteAuthorView.text="Aristotle"
-        case 3:
-            quoteDisplayView.text="Be kind whenever possible. It is always possible."
-            quoteAuthorView.text="Dalai Lama"
-        case 4:
-            quoteDisplayView.text="Never gonna give you up, Never gonna let you down"
-            quoteAuthorView.text="Rick Astley"
-        case 5:
-            quoteDisplayView.text="Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence."
-            quoteAuthorView.text="Helen Keller"
-        default:
-            quoteNumber = 0
-        }
-        
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
     
+    @IBAction func playButtonClicked(_ sender: Any) {
+        let adjText = adjectiveField.text!
+        let verText = verbField.text!
+        let sayText = sayingField.text!
+        let nouText = nounField.text!
+        let fooText = foodsField.text!
+        let colText = colorField.text!
+        let somText = somethingField.text!
+        let aniText = animalField.text!
+        let perText = personField.text!
+        
+        let part1 = "Today I went to my favorite Taco Stand called the " + adjText + " " + aniText
+        let part2 = ". Unlike most food stands, they cook and prepare the food in a " + somText
+        let part3 = " while you " + verText + "."
+        let part4 = "The best thing on the menu is the " + colText + " " + nouText
+        let part5 = ". Instead of ground beef they fill the taco with " + fooText + ", cheese, and top it off with a salsa made from "
+        let part6 = fooText + ". If that doesn't make your mouth water, then it's just like "
+        let part7 = perText + " always says: " + sayText + "!"
+        
+        madLibDisplayView.text =  part1 + part2 + part3 + part4 + part5 + part6 + part7
+        
+    }
 }
+
 
