@@ -13,7 +13,7 @@ class ViewController: UIViewController{
     
     var imageNumber = 0
     var foodName = ["Duck", "Egg Tart", "Burger", "Ice Cream", "Lo Mien", "Pizza", "Salad"]
-    var foodPrice = [19.99, 8.99, 15.99, 9.99, 7.99, 19.99, 10.99]
+    var foodPrice: [Double] = [19.99, 8.99, 15.99, 9.99, 7.99, 19.99, 10.99]
     var orderList = [] as [Double]
     var orderTotal = 0.0
     var orderTotalWithTip = 0.0
