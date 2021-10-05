@@ -10,7 +10,6 @@
         <!--Food Ordering App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="Food Ordering App" id="BYZ-38-t0r" customClass="ViewController" customModule="SFSU_Irene_Jiang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -48,6 +47,9 @@
                                         <state key="normal" title="Order Dish">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="orderDishClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1nB-LM-esF"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSG-2Q-eX8">
                                         <rect key="frame" x="0.0" y="174" width="384" height="517.5"/>
@@ -67,10 +69,12 @@
                     <navigationItem key="navigationItem" id="x92-np-ey4"/>
                     <connections>
                         <outlet property="OrderDishButtonPressed" destination="FPV-T7-iL7" id="nE9-uL-jLJ"/>
+                        <outlet property="foodDisplayImage" destination="cSG-2Q-eX8" id="GL2-a6-7z7"/>
                         <outlet property="foodPriceDisplayLabel" destination="mrS-h0-AYT" id="34Z-s7-PiH"/>
                         <outlet property="foodSearchInputField" destination="gEK-HO-OWy" id="PJL-GW-keM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="129.91071428571428"/>
         </scene>

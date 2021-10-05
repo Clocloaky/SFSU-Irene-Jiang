@@ -21,13 +21,14 @@ class ViewController: UIViewController{
     var eggT = Food(foodName: "Egg Tart", foodPrice: 8.99)
     var burger = Food(foodName: "Burger", foodPrice: 15.99)
     var iceC = Food(foodName: "Ice Cream", foodPrice: 9.99)
-    var LoM = Food(foodName: "Lo Mien", foodPrice: 7.99)
+    var loM = Food(foodName: "Lo Mien", foodPrice: 7.99)
     var pizza = Food(foodName: "Pizza", foodPrice: 19.99)
     var salad = Food(foodName: "Salad", foodPrice: 10.99)
     
     @IBOutlet weak var foodSearchInputField: UITextField!
     @IBOutlet weak var OrderDishButtonPressed: UIButton!
     @IBOutlet weak var foodPriceDisplayLabel: UILabel!
+    @IBOutlet weak var foodDisplayImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,28 @@ class ViewController: UIViewController{
         navigationController?.navigationBar.barStyle = .black
     }
 
+    @IBAction func orderDishClicked(_ sender: UIButton) {
+        
+        switch foodSearchInputField.text?.lowercased() {
+        case "duck":
+            foodPriceDisplayLabel.text = "Price of " + duck.foodName + ": " + " $" + "\(duck.foodPrice)"
+            foodDisplayImage
+        case "egg tart":
+            foodPriceDisplayLabel.text = "Price of " + eggT.foodName + ": " + " $" + "\(eggT.foodPrice)"
+        case "burger":
+            foodPriceDisplayLabel.text = "Price of " + burger.foodName + ": " + " $" + "\(burger.foodPrice)"
+        case "ice cream":
+            foodPriceDisplayLabel.text = "Price of " + iceC.foodName + ": " + " $" + "\(iceC.foodPrice)"
+        case "lo mien":
+            foodPriceDisplayLabel.text = "Price of " + loM.foodName + ": " + " $" + "\(loM.foodPrice)"
+        case "pizza":
+            foodPriceDisplayLabel.text = "Price of " + pizza.foodName + ": " + " $" + "\(pizza.foodPrice)"
+        case "salad":
+            foodPriceDisplayLabel.text = "Price of " + salad.foodName + ": " + " $" + "\(salad.foodPrice)"
+        default:
+            foodPriceDisplayLabel.text = "Invalid Input"
+        }
+    }
     
     
 }
