@@ -34,7 +34,7 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="384" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-h0-AYT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-h0-AYT">
                                         <rect key="frame" x="0.0" y="54" width="384" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

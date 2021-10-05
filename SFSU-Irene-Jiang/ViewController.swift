@@ -48,21 +48,28 @@ class ViewController: UIViewController{
         switch foodSearchInputField.text?.lowercased() {
         case "duck":
             foodPriceDisplayLabel.text = "Price of " + duck.foodName + ": " + " $" + "\(duck.foodPrice)"
-            foodDisplayImage
+            foodDisplayImage.image = UIImage(named: duck.foodName)
         case "egg tart":
             foodPriceDisplayLabel.text = "Price of " + eggT.foodName + ": " + " $" + "\(eggT.foodPrice)"
+            foodDisplayImage.image = UIImage(named: eggT.foodName)
         case "burger":
             foodPriceDisplayLabel.text = "Price of " + burger.foodName + ": " + " $" + "\(burger.foodPrice)"
+            foodDisplayImage.image = UIImage(named: burger.foodName)
         case "ice cream":
             foodPriceDisplayLabel.text = "Price of " + iceC.foodName + ": " + " $" + "\(iceC.foodPrice)"
+            foodDisplayImage.image = UIImage(named: iceC.foodName)
         case "lo mien":
             foodPriceDisplayLabel.text = "Price of " + loM.foodName + ": " + " $" + "\(loM.foodPrice)"
+            foodDisplayImage.image = UIImage(named: loM.foodName)
         case "pizza":
             foodPriceDisplayLabel.text = "Price of " + pizza.foodName + ": " + " $" + "\(pizza.foodPrice)"
+            foodDisplayImage.image = UIImage(named: pizza.foodName)
         case "salad":
             foodPriceDisplayLabel.text = "Price of " + salad.foodName + ": " + " $" + "\(salad.foodPrice)"
+            foodDisplayImage.image = UIImage(named: salad.foodName)
         default:
             foodPriceDisplayLabel.text = "Invalid Input"
+            foodDisplayImage.image = nil
         }
     }
     
