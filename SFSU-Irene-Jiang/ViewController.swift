@@ -7,43 +7,46 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var imageNumber = 0
     @IBOutlet weak var foodDisplayView: UIImageView!
     @IBOutlet weak var foodPriceView: UILabel!
+    var audioPlayer: AVAudioPlayer!
+    struct food{
+        var foodID: Int
+        var foodName: String
+        var foodPrice: Double
+        var foodSound: String
+    }
+    
+    var foodList = [food(foodID: 0, foodName: "Duck", foodPrice: 19.99, foodSound: "cheering01"), food(foodID: 1, foodName: "Egg Tart", foodPrice: 8.99, foodSound: "magic"), food(foodID: 2, foodName: "Burger", foodPrice: 15.99, foodSound: "movie")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
     }
     
     
     @IBAction func nextDishClick(_ sender: UIButton) {
+        foodDisplayView.image = UIImage(named: "dish\(foodList[imageNumber].foodID)")
+        foodPriceView.text = "\(foodList[imageNumber].foodName): $\(foodList[imageNumber].foodPrice)"
+        if let sound = NSDataAsset(name: "\(foodList[imageNumber].foodSound)"){
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            } catch {
+                print("Error: Could not initialize AVAudioPlayer Object")
+            }
+        }else{
+            print("Error: Could not read sound file")
+        }
         imageNumber += 1
-        foodDisplayView.image = UIImage(named: "dish\(imageNumber)")
-
-        if imageNumber == 7 {imageNumber = 1}
-        
-        switch imageNumber {
-        case 1:
-            foodPriceView.text = "Duck: $19.99"
-        case 2:
-            foodPriceView.text = "Egg Tart: $8.99"
-        case 3:
-            foodPriceView.text = "Burger: $15.99"
-        case 4:
-            foodPriceView.text = "Ice Cream: $9.99"
-        case 5:
-            foodPriceView.text = "Lo Mien: $7.99"
-        case 6:
-            foodPriceView.text = "Pizza: $19.99"
-        case 7:
-            foodPriceView.text = "Salad: $10.99"
-        default:
-            print("default should not proc")
+        if imageNumber > 2 {
+            imageNumber = 0
         }
         
     }
